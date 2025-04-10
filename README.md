@@ -1,4 +1,4 @@
-This application is based on the first version of the SEDETA Tickets app, originally developed to manage material transport tickets. It represents an evolution toward a more generalized and modular version, designed to support multiple tenants.
+This application is based on the first version of the [SEDENA: Ticket Printer Web App](https://github.com/IzuOvando/ticket_printer_web_app). Originally it was developed to manage material transport tickets. It represents an evolution toward a more generalized and modular version.
 
 # Pre-requisites
 This project has interactions with many SaaS solutions (in specific from [Vercel](https://vercel.com/)) and other components, so at least for run this project is necessary to have:
@@ -6,8 +6,7 @@ This project has interactions with many SaaS solutions (in specific from [Vercel
 - **[Vercel KV](https://vercel.com/docs/storage/vercel-kv)** (a Redis instance available via the [Vercel Marketplace](https://vercel.com/integrations/upstash) through [Upstash](https://upstash.com/))
 
 > [!TIP]
-> In order to facilitate local development it was created a docker image ([see installation ](#installation) for more information) where a **PostgreSQL** Database and a **Vercel KV** Redis Instance is available for use.
-
+> In order to facilitate local development it was created a docker image ([see installation ](#installation) for more information) where a **PostgreSQL** Database and a **Vercel KV** Redis Instance is available for use
 
 # Installation 💻
 
@@ -48,8 +47,8 @@ docker-compose up
 Then for be able to use the instances you must set the following variables in your `.env`:
 ```dosini
 # * DATABASE
-DATABASE_URL=postgresql://postgres:N0M3L0S3@localhost:5432/sedena_tickets
-POSTGRES_URL_NON_POOLING=postgresql://postgres:N0M3L0S3@localhost:5432/sedena_tickets
+DATABASE_URL=postgresql://postgres:N0M3L0S3@localhost:5432/sdn_trucks
+POSTGRES_URL_NON_POOLING=postgresql://postgres:N0M3L0S3@localhost:5432/sdn_trucks
 
 # * VERCEL KV / REDIS 
 KV_REST_API_URL=http://localhost:8079
